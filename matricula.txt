@@ -1,0 +1,3 @@
+El estudiante: Jhon.
+ Con cedula: 71255. 
+ Se ha matriculado en el curso: Identificador Curso: 2 | Nombre: Ingles Basico | Duracion: 64 Horas | Valor: $1.280.000
