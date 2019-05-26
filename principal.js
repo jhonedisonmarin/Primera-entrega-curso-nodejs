@@ -9,39 +9,18 @@ if(id){
         if(Number.isInteger(id)){
 
             console.log('Curso Encontrado'); 
-            //console.log('Matricula realizada');
+            console.log('Matricula realizada');
+            const fs = require('fs');
 
             let crearArchivo = (argv) => {
-                const express = require('express')
-                const app = express()
-
-                /*
                 texto = 'El estudiante: ' + nombre + '.\n ' +
                 'Con cedula: ' + cedula + '. \n ' + 
                 'Se ha matriculado en el curso: Identificador Curso: '+estudianteCurso.id+' | Nombre: '+estudianteCurso.nombre+' | Duracion: '+estudianteCurso.duracion+' | Valor: '+estudianteCurso.valor;
-                */
-
-                texto = '<!DOCTYPE html>'+ '\n' +
-                '<html lang="en">'+ '\n' +
-                '<head>'+ '\n' +                    
-                '    <meta charset="UTF-8">'+ '\n' +
-                '    <title>BONUS MOSTRAR RESULTADOS PRIMERA ENTREGA EN NAVEGADOR</title>'+ '\n' +
-                '</head>'+ '\n' +
-                '<body>'+ '\n' +
-                '       <h1>Bienvenido</h1>'+ '\n' +
-                '        <h2>El estudiante: </h2> <p>' + nombre + '</p> \n' +
-                '        <h2>Con cedula: </h2> <p>' + cedula + '</p> \n ' +    
-                '        <h2>Se ha matriculado en el curso: </h2> <p> Identificador Curso: '+estudianteCurso.id+' | Nombre: '+estudianteCurso.nombre+' | Duracion: '+estudianteCurso.duracion+' | Valor: '+estudianteCurso.valor + '</p> \n ' + 
-                '</body>'+ '\n' +
-                '</html>'
-
-                app.get('/', function (req, res) {
-                res.send(texto)
-                })
-
-                app.listen(3000)
-
-                console.log('SE HA REALIZADO LA MATICULA CON EXITO - Para verificar los datos abra el navegador y escriba: http://localhost:3000/')
+                fs.writeFile('matricula.txt', texto, (err) => {
+                    if (err) throw (err)
+                    console.log('Se ha creado el archivo - matricula.txt')
+            
+                });
             }
             crearArchivo (argv);
 
