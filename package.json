@@ -4,6 +4,7 @@
   "description": "Primera entrega curso nodejs",
   "main": "principal.js",
   "dependencies": {
+    "express": "^4.17.1",
     "yargs": "^13.2.2"
   },
   "devDependencies": {},
